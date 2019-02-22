@@ -43,5 +43,6 @@ app.use('/api/posts', posts);
 app.use('/api/profile', profile);
 
 const port = process.env.PORT || 9009;
+const ip = process.env.IP || '0.0.0.0';
 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(port, ip, () => console.log(`Server is running on port ${port}`));
